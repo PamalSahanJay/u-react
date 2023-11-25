@@ -37,6 +37,14 @@
   margin-bottom: 10px;
 }
 
+.pink {
+  background-color: pink;
+}
+
+.yellow {
+  background-color: yellowgreen;
+}
+
 .in-outer {
   margin-bottom: 10px;
 } 

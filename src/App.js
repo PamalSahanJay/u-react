@@ -43,15 +43,16 @@ function App() {
     const copy_card = [...card]
     copy_card[cardIndex].name = event.target.value
     setcard(copy_card)
-
   }
 
-  const buttonStyle = {
-    backgroundColor: null
-  }
+  // const buttonStyle = {
+  //   backgroundColor: null
+  // }
 
-  //if(card.length < 3) {buttonStyle.backgroundColor= 'pink'}
-  if(card.length < 1) {buttonStyle.backgroundColor= 'purple'}
+  const classes = ['button']
+
+  if(card.length < 3) {classes.push('pink')}
+  if(card.length-1 < 1) {classes.push('yellow')}
 
   // const changeNameHandler = (name) => {
   //   setname(name)
@@ -96,9 +97,8 @@ function App() {
 
   return (
     <div className="App">
-      <button className="button" style={buttonStyle} onClick={() => showCardHandler()}>show card</button>
+      <button className={classes.join(' ')} onClick={() => showCardHandler()}>show card</button>
       {cardToggle}
-
     </div>
   );
 }
