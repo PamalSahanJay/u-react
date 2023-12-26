@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Card from './ui/Card'
 import { faker } from '@faker-js/faker';
 
 function App() {
+
+ 
+  
+
   // const [initialName, setname] = useState("Anita Weber")
   const [showCard, setShowCard] = useState(true);
   const [card, setcard] = useState([
@@ -26,6 +30,13 @@ function App() {
       image: "https://avatars.githubusercontent.com/u/97784561"
     }
   ])
+
+  useEffect (() => {
+    alert("this is use effect")
+  
+    return () => {
+    }
+  }, [card.at(0).name,card.at(1).name])
 
   const showCardHandler = () => {
     setShowCard(!showCard)
