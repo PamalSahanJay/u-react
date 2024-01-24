@@ -3,31 +3,30 @@ import '../App.css';
 
 const Card = (prop) => {
 
-    const [X, setX] = useState(0)
-    const [Y, setY] = useState(0)
+    // const [X, setX] = useState(0)
+    // const [Y, setY] = useState(0)
 
-    const recordMouse = e => {
-        setX(e.clientX)
-        setY(e.clientY)
-    }
+    // const recordMouse = e => {
+    //     setX(e.clientX)
+    //     setY(e.clientY)
+    // }
 
-    console.log('mouse event')
+    // console.log('mouse event')
 
-    useEffect(() => {
-        window.addEventListener('mousemove', recordMouse)
+    // useEffect(() => {
+    //     window.addEventListener('mousemove', recordMouse)
 
-        return () => {
-            console.log("card clean up")
-            window.removeEventListener('mousemove',recordMouse)
-        }
-    }, [])
+    //     return () => {
+    //         console.log("card clean up")
+    //         window.removeEventListener('mousemove',recordMouse)
+    //     }
+    // }, [])
 
 
 
     return (
         <div className="card">
-            <p>x position : {X}</p> <p>y position : {Y}</p>
-            <img src={prop.image} alt="Avatar" style={{ width: '100%' }}></img>
+            {/* <p>x position : {X}</p> <p>y position : {Y}</p> */}
             <div className="container">
                 <h4><b>{prop.name}</b></h4>
                 <p>{prop.title}</p>
